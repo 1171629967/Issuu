@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.onekeyshare.OnekeyShare;
+
 import com.wlx.issuu.widget.MyActionBar;
 
 public class BookStoreFragment extends BaseFragment{
@@ -26,5 +29,4 @@ public class BookStoreFragment extends BaseFragment{
 	}
 
 	
-
 }
