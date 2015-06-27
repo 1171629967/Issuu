@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.wlx.issuu.BaseFragment.menuClicklistener;
@@ -29,6 +30,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	public SlidingMenu menu;
 	private RelativeLayout rl_myBookRack, rl_bookStore, rl_myInfo, rl_myShopCart,
 			rl_news, rl_collect, rl_setting, rl_aboutUs;
+	private TextView tv_login;
 
 	public static final String MY_BOOK_RACK = "menu_myBookRack";
 	public static final String BOOK_STORE = "menu_BookStore";
@@ -78,6 +80,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		rl_collect = (RelativeLayout) menu.findViewById(R.id.rl_collect);
 		rl_setting = (RelativeLayout) menu.findViewById(R.id.rl_setting);
 		rl_aboutUs = (RelativeLayout) menu.findViewById(R.id.rl_aboutUs);
+		tv_login = (TextView) menu.findViewById(R.id.tv_login);
 
 		rl_myBookRack.setOnClickListener(this);
 		rl_bookStore.setOnClickListener(this);
@@ -87,7 +90,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		rl_collect.setOnClickListener(this);
 		rl_setting.setOnClickListener(this);
 		rl_aboutUs.setOnClickListener(this);
-
+		tv_login.setOnClickListener(this);
 	}
 
 	private void initSlidingMenu() {
@@ -142,8 +145,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 					.replace(R.id.fl_fragments, new AboutUsFragment()).commit();
 			currentFragment = ABOUT_US;
 		}
+		else if(v == tv_login){
+			startActivity(new Intent(this,LoginActivity.class));
+		}
+		
+		if (v == tv_login) {
+			
+		}
+		else {
+			menu.toggle(true);
+		}
 
-		menu.toggle(true);
+		
 
 	}
 

@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"   >
 
-    <TextView 
+    <com.wlx.issuu.widget.XListView
+        android:id="@+id/list"
+        android:scrollbars="vertical"
+         android:fastScrollEnabled="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="我的书架"
-        />
-
+        android:layout_height="match_parent" />
    
 </RelativeLayout>
